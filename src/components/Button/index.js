@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 function Button({
+  className,
   to,
   href,
   primary = false,
@@ -13,6 +14,7 @@ function Button({
   large = false,
   disabled = false,
   rounded = false,
+  retangle = false,
   leftIcon,
   rightIcon,
   children,
@@ -21,12 +23,14 @@ function Button({
 }) {
   let Comp = 'button';
   const classes = cx('wrapper', {
+    [className]: className,
     primary,
     outline,
     small,
     large,
     disabled,
     rounded,
+    retangle,
   });
   const props = {
     onClick,

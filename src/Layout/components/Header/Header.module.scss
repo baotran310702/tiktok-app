@@ -5,7 +5,6 @@
   --search-btn-width: 52px;
   box-shadow: 0px 1px 1px rgb(0 0 0/12%);
   height: var(--default-layout-header-height, 60px);
-
   width: 100%;
   display: flex;
   justify-content: center;
@@ -13,6 +12,7 @@
 
 .inner {
   height: 100%;
+  padding: 0 var(--default-layout-horizontal-space);
   width: var(--default-layout-width);
   display: flex;
   align-items: center;
@@ -104,4 +104,37 @@
   &:active {
     background-color: rgba(22, 24, 35, 0.06);
   }
+}
+
+//Action
+
+.more-btn {
+  font-size: 2rem;
+  margin-left: 24px;
+  background-color: transparent;
+  padding: 0px 8px;
+  cursor: pointer;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+}
+
+.action-btn {
+  background-color: var(--white);
+  font-size: 2.6rem;
+  line-height: 2.1rem;
+  position: relative;
+  margin-left: 16px;
+  padding: 4px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 16px;
+  cursor: pointer;
 }
