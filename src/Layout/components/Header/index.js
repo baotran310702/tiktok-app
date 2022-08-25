@@ -171,7 +171,7 @@ function Header() {
                 className={cx('user-avatar')}
                 src="https://estnn.com/wp-content/uploads/2021/03/t1-roster-2021-747x420.jpeg"
                 alt="avatar"
-                //customFallback="https://estnn.com/wp-content/uploads/2020/03/d2t1-747x420.jpg"
+                customFallback="https://estnn.com/wp-content/uploads/2020/03/d2t1-747x420.jpg"
               />
             ) : (
               <>
