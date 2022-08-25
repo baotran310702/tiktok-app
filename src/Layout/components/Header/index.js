@@ -11,7 +11,6 @@ import {
   faKeyboard,
   faLanguage,
   faMagnifyingGlass,
-  faMessage,
   faSignIn,
   faSpinner,
   faUser,
@@ -28,6 +27,8 @@ import AccountItem from '~/components/AccountItems';
 import Button from '~/components/Button';
 import Menu from '~/Layout/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
+import { SendMessageIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -92,6 +93,8 @@ function Header() {
 
   const currentUser = true;
 
+  const newMessages = 13;
+
   useEffect(() => {
     setTimeout(() => {
       setResult([]);
@@ -143,7 +146,8 @@ function Header() {
               </Tippy>
               <Tippy delay={[0, 200]} content="Send message">
                 <button className={cx('action-btn')}>
-                  <FontAwesomeIcon icon={faMessage} />
+                  <SendMessageIcon></SendMessageIcon>
+                  {newMessages > 0 && <span className={cx('countMessage')}>{newMessages}</span>}
                 </button>
               </Tippy>
             </>
@@ -163,7 +167,12 @@ function Header() {
           )}
           <Menu items={currentUser ? userMenus : MENU_ITEMS} onChoosen={handleMenuChange}>
             {currentUser ? (
-              <img className={cx('user-avatar')} src={imagesD} alt="avatar" />
+              <Image
+                className={cx('user-avatar')}
+                src="https://estnn.com/wp-content/uploads/2021/03/t1-roster-2021-747x420.jpeg"
+                alt="avatar"
+                //customFallback="https://estnn.com/wp-content/uploads/2020/03/d2t1-747x420.jpg"
+              />
             ) : (
               <>
                 <button className={cx('more-btn')}>
