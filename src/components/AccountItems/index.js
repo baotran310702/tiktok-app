@@ -3,21 +3,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import styles from './AccountItem.module.scss';
 import images from '~/assets/images/img.jpg';
+import Image from '../Image';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function AccountItem() {
+function AccountItem({ data }) {
   return (
-    <div className={cx('wrapper')}>
-      <img className={cx('avatar')} src={images} alt="avatar" />
+    <Link to={`/@${data.nickname}`} className={cx('wrapper')}>
+      <Image
+        className={cx('avatar')}
+        src={data.avatar}
+        alt={data.full_name}
+        customFallback="https://estnn.com/wp-content/uploads/2020/03/d2t1-747x420.jpg"
+      />
       <div className={cx('infor')}>
         <h4 className={cx('name')}>
-          <span>Bùi Thuý Diễm</span>
-          <FontAwesomeIcon className={cx('tick')} icon={faCheckCircle}></FontAwesomeIcon>
+          <span>{data.full_name}</span>
+          {data.tick && <FontAwesomeIcon className={cx('tick')} icon={faCheckCircle}></FontAwesomeIcon>}
         </h4>
-        <span className={cx('username')}>thuydiem011202</span>
+        <span className={cx('username')}>{data.nickname}</span>
       </div>
-    </div>
+    </Link>
   );
 }
 

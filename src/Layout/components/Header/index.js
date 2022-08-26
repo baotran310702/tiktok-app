@@ -3,32 +3,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowRightFromBracket,
   faCircleQuestion,
-  faCircleXmark,
   faCloudArrowUp,
   faCoins,
   faEllipsisVertical,
   faGear,
   faKeyboard,
   faLanguage,
-  faMagnifyingGlass,
   faSignIn,
-  faSpinner,
   faUser,
 } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
-import HeadlessTippy from '@tippyjs/react/headless';
-import Tippy from '@tippyjs/react';
 
+import Tippy from '@tippyjs/react';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
-import imagesD from '~/assets/images/img.jpg';
+
 import images from '~/assets/images';
-import { Wrapper as ProperWrapper } from '~/Layout/Popper';
-import AccountItem from '~/components/AccountItems';
+
 import Button from '~/components/Button';
 import Menu from '~/Layout/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
 import { SendMessageIcon } from '~/components/Icons';
 import Image from '~/components/Image';
+import Search from '../Search';
 
 const cx = classNames.bind(styles);
 
@@ -67,7 +63,7 @@ const userMenus = [
   {
     icon: <FontAwesomeIcon icon={faUser} />,
     title: 'View profile',
-    to: '/@mycrush',
+    to: '/@profiles',
   },
   {
     icon: <FontAwesomeIcon icon={faCoins} />,
@@ -89,17 +85,9 @@ const userMenus = [
 ];
 
 function Header() {
-  const [result, setResult] = useState([]);
-
   const currentUser = true;
 
   const newMessages = 13;
-
-  useEffect(() => {
-    setTimeout(() => {
-      setResult([]);
-    }, 0);
-  });
 
   const handleMenuChange = (menuItem) => {
     console.log(menuItem);
@@ -108,34 +96,10 @@ function Header() {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <img src={images.logo} alt="tiktok"></img>
-        <HeadlessTippy
-          visible={result.length > 0}
-          interactive={true}
-          render={(attrs) => (
-            <div className={cx('search-result')} tabIndex="-1">
-              <ProperWrapper>
-                <h4 className={cx('search-title')}>Accounts</h4>
-                <AccountItem />
-                <AccountItem />
-                <AccountItem />
-                <AccountItem />
-              </ProperWrapper>
-            </div>
-          )}
-        >
-          <div className={cx('search')}>
-            <input placeholder="Search accounts or videos..." spellCheck={false} />
-            <button className={cx('clear-btn')}>
-              <FontAwesomeIcon icon={faCircleXmark} />
-            </button>
-            <FontAwesomeIcon className={cx('spinner')} icon={faSpinner} />
-
-            <button className={cx('search-btn')}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </button>
-          </div>
-        </HeadlessTippy>
+        <Link to="/">
+          <img src={images.logo} alt="tiktok"></img>
+        </Link>
+        <Search />
         <div className={cx('action')}>
           {currentUser ? (
             <>
