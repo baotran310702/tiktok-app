@@ -43,6 +43,7 @@ function Menu({ children, items = [], onChoosen = defaultFn }) {
       offset={[12, 8]}
       interactive={true}
       placement="bottom-end"
+      hideOnClick={false}
       render={(attrs) => (
         <div className={cx('menu-list')} tabIndex="-1">
           <ProperWrapper className={cx('menu-popper')}>
