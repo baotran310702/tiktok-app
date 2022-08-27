@@ -4,28 +4,29 @@ import Profiles from '~/pages/Profiles';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
 import { HeaderOnly } from '~/Layout';
+import routesConfig from '~/config/routes';
 
 //Pulic routes for members
 const publicRoutes = [
   {
-    path: '/',
+    path: routesConfig.home,
     components: Home,
   },
   {
-    path: '/following',
+    path: routesConfig.following,
     components: Following,
   },
   {
-    path: '/@:profiles',
+    path: routesConfig.profile,
     components: Profiles,
   },
   {
-    path: '/upload',
+    path: routesConfig.upload,
     components: Upload,
     layout: HeaderOnly,
   },
   {
-    path: '/search',
+    path: routesConfig.search,
     components: Search,
     layout: null,
   },
