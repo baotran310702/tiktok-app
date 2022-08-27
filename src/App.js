@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import DefaultLayout from './Layout/DefaultLayout';
+import DefaultLayout from './layout/DefaultLayout';
 import { publicRoutes } from './routes';
 import { Fragment } from 'react';
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (

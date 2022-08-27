@@ -20,7 +20,7 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 
 import Button from '~/components/Button';
-import Menu from '~/Layout/Popper/Menu';
+import Menu from '~/layout/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
 import { SendMessageIcon } from '~/components/Icons';
 import Image from '~/components/Image';

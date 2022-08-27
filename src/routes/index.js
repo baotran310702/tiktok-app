@@ -3,7 +3,7 @@ import Home from '~/pages/Home';
 import Profiles from '~/pages/Profiles';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
-import { HeaderOnly } from '~/Layout';
+import { HeaderOnly } from '~/layout';
 import routesConfig from '~/config/routes';
 
 //Pulic routes for members

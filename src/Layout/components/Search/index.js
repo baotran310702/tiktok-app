@@ -1,7 +1,7 @@
 import HeadlessTippy from '@tippyjs/react/headless';
-import { Wrapper as ProperWrapper } from '~/Layout/Popper';
+import { Wrapper as ProperWrapper } from '~/layout/Popper';
 import AccountItem from '~/components/AccountItems';
-import * as searchSevices from '~/apiSevices/searchSevices';
+import * as searchSevices from '~/services/searchSevices';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
