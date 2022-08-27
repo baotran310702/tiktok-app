@@ -3,7 +3,7 @@ import styles from './Menu.module.scss';
 import Tippy from '@tippyjs/react/headless';
 import { useState } from 'react';
 
-import { Wrapper as ProperWrapper } from '~/Layout/Popper';
+import { Wrapper as ProperWrapper } from '~/layout/Popper';
 import MenuItems from './MenuItems';
 import Header from './Header';
 
