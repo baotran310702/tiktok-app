@@ -25,12 +25,17 @@
   padding-bottom: 24px;
 }
 
+.menu-body {
+  overflow-y: overlay;
+}
+
 //Header
 
 .header {
   position: relative;
-  height: 50px;
+  height: 48px;
   margin-top: -8px;
+  flex-shrink: 0;
 }
 .back-btn {
   width: 50px;

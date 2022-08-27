@@ -46,6 +46,76 @@ const MENU_ITEMS = [
           code: 'vi',
           title: 'Vietnamese',
         },
+        {
+          type: 'english',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'vietnam',
+          code: 'vi',
+          title: 'Vietnamese',
+        },
+        {
+          type: 'english',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'vietnam',
+          code: 'vi',
+          title: 'Vietnamese',
+        },
+        {
+          type: 'english',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'vietnam',
+          code: 'vi',
+          title: 'Vietnamese',
+        },
+        {
+          type: 'english',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'vietnam',
+          code: 'vi',
+          title: 'Vietnamese',
+        },
+        {
+          type: 'english',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'vietnam',
+          code: 'vi',
+          title: 'Vietnamese',
+        },
+        {
+          type: 'english',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'vietnam',
+          code: 'vi',
+          title: 'Vietnamese',
+        },
+        {
+          type: 'english',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'vietnam',
+          code: 'vi',
+          title: 'Vietnamese',
+        },
       ],
     },
   },

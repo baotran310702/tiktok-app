@@ -16,6 +16,10 @@ function Menu({ children, items = [], onChoosen = defaultFn }) {
 
   const current = history[history.length - 1];
 
+  const handleOnback = () => {
+    setHistory((prev) => prev.slice(0, prev.length - 1));
+  };
+
   const renderItems = () => {
     return current.data.map((item, index) => {
       const isParent = !!item.children;
@@ -39,7 +43,7 @@ function Menu({ children, items = [], onChoosen = defaultFn }) {
 
   return (
     <Tippy
-      delay={[0, 700]}
+      delay={[0, 500]}
       offset={[12, 8]}
       interactive={true}
       placement="bottom-end"
@@ -47,18 +51,8 @@ function Menu({ children, items = [], onChoosen = defaultFn }) {
       render={(attrs) => (
         <div className={cx('menu-list')} tabIndex="-1">
           <ProperWrapper className={cx('menu-popper')}>
-            {history.length > 1 && (
-              <Header
-                onBack={() => {
-                  setHistory((prev) => {
-                    prev.pop();
-                    return prev;
-                  });
-                }}
-                title="Language"
-              />
-            )}
-            {renderItems()}
+            {history.length > 1 && <Header onBack={handleOnback} title="Language" />}
+            <div className={cx('menu-body')}>{renderItems()}</div>
           </ProperWrapper>
         </div>
       )}

@@ -30,7 +30,42 @@ body {
   //Này sẽ giúp text lấy font mặc định, sau đó tải xong font gg thì sẽ xuất lên sau nếu mạng chậm
   text-rendering: optimizeSpeed;
   color: var(--text-color);
+  overflow-y: overlay;
 }
+
+//Scrollbar Css
+
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+//Button css - global
 
 button,
 input [tabindex] {
