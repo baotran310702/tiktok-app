@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Wrapper as ProperWrapper } from '~/layout/Popper';
 import MenuItems from './MenuItems';
 import Header from './Header';
+import PropTypes from 'prop-types';
 
 const defaultFn = () => {};
 
@@ -62,5 +63,11 @@ function Menu({ children, items = [], onChoosen = defaultFn }) {
     </Tippy>
   );
 }
+
+Menu.propTypes = {
+  children: PropTypes.node.isRequired,
+  items: PropTypes.array.isRequired,
+  onChoosen: PropTypes.func,
+};
 
 export default Menu;
