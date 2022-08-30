@@ -4,6 +4,7 @@ import Profiles from '~/pages/Profiles/Profiles';
 import Upload from '~/pages/Upload/Upload';
 import Search from '~/pages/Search/Search';
 import { HeaderOnly } from '~/layout';
+import Live from '~/pages/Live';
 import routesConfig from '~/config/routes';
 
 //Pulic routes for members
@@ -29,6 +30,10 @@ const publicRoutes = [
     path: routesConfig.search,
     components: Search,
     layout: null,
+  },
+  {
+    path: routesConfig.live,
+    components: Live,
   },
 ];
 
