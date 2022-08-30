@@ -209,11 +209,9 @@ function Header() {
                 customFallback="https://estnn.com/wp-content/uploads/2020/03/d2t1-747x420.jpg"
               />
             ) : (
-              <>
-                <button className={cx('more-btn')}>
-                  <FontAwesomeIcon icon={faEllipsisVertical} />
-                </button>
-              </>
+              <button className={cx('more-btn')}>
+                <FontAwesomeIcon icon={faEllipsisVertical} />
+              </button>
             )}
           </Menu>
         </div>
