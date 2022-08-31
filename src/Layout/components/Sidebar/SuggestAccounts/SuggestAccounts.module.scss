@@ -1,0 +1,63 @@
+.wrapper {
+  border-top: 1px solid #e3e3e3;
+  margin-left: -16px;
+  cursor: pointer;
+}
+
+.label {
+  padding: 8px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.account-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-right: 40px;
+}
+
+.image-item {
+  height: 32px;
+  width: 32px;
+  border-radius: 120px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.infor-item {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.nickname {
+  font-size: 1.6rem;
+  color: #161823;
+  line-height: 1;
+}
+
+.tick {
+  font-size: 1.4rem;
+  color: #20d5ec;
+  margin-left: 4px;
+}
+
+.name {
+  font-size: 1.2rem;
+  opacity: #161823bf;
+}
+
+.more-btn {
+  font-size: 1.4rem;
+  color: rgb(179, 17, 17);
+  padding: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+//Poper Tippy
+
+.preview {
+  width: 228px;
+  height: 400px;
+}

@@ -1,0 +1,52 @@
+//Poper Tippy
+
+.wrapper {
+  width: 320px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-item {
+  height: 40px;
+  width: 40px;
+  border-radius: 120px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.follow-btn {
+  padding: 6px 16px;
+}
+
+.body {
+  margin-top: 12px;
+  color: #161823;
+}
+
+.nickname {
+  font-size: 1.8rem;
+}
+.tick {
+  font-size: 1.4rem;
+  color: #20e5ac;
+  margin-left: 4px;
+}
+
+.name {
+  font-size: 1.4rem;
+}
+.analystics {
+  font-size: 1.6rem;
+  margin-top: 10px;
+}
+.value ~ .value {
+  margin-left: 20px;
+}
+.label {
+  color: #161823bf;
+}

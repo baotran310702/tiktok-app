@@ -1,7 +1,7 @@
 .menu-items {
   display: flex;
   font-size: 1.8rem;
-  padding: 8px;
+  padding: 4px;
   font-weight: 700;
   align-items: center;
   border-radius: 4px;
@@ -24,8 +24,14 @@
   }
 }
 
+.icon,
+.icon-active {
+  display: block;
+}
+
 .title {
   margin-left: 12px;
+  margin-top: -6px;
 }
 
 .icon-active {
