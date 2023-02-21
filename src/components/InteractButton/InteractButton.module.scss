@@ -1,0 +1,56 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 12px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    .icon {
+      transform: scale(2);
+    }
+  }
+}
+
+.icon {
+  width: 18px;
+  height: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon-active {
+  width: 18px;
+  height: 20px;
+  transition: transform 0.2s ease-in-out;
+  animation: color-change 1s ease-in-out;
+  color: red;
+}
+
+.value {
+  font-size: 12px;
+}
+
+//Key frames color change button react
+
+@keyframes color-change {
+  0% {
+    color: rgb(0, 0, 0);
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: red;
+  }
+}

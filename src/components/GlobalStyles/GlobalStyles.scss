@@ -13,6 +13,16 @@
   --default-layout-horizontal-space: 24px;
 }
 
+/* Hide fullscreen button in webkit-based browsers */
+video::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
+
+/* Hide fullscreen button in Safari and iOS */
+video::-webkit-media-controls-overflow-button {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

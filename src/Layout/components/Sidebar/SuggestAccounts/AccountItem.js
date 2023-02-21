@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
-import images from '~/assets/images/img.jpg';
+import images from '~/assets/images/img1.jpg';
 
 import Image from '~/components/Image';
 import { Wrapper as ProperWrapper } from '~/layout/Popper';
@@ -30,10 +30,10 @@ function AccountItem({ label }) {
         <Image className={cx('image-item')} src={images} alt="my girls"></Image>
         <div className={cx('infor-item')}>
           <p className={cx('nickname')}>
-            <strong>thuydiem1201</strong>
+            <strong>t1_faker</strong>
             <FontAwesomeIcon className={cx('tick')} icon={faCheckCircle} />
           </p>
-          <p className={cx('name')}>Bùi Thuý Diễm</p>
+          <p className={cx('name')}>T1 Faker</p>
         </div>
       </div>
     </Tippy>
