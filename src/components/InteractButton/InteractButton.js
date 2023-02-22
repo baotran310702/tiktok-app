@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 function InteractButton({ className, isHeart = false, isComment = false, isShare = false, data, ...passProps }) {
   const [clicked, setClicked] = useState(false);
-  console.log(clicked);
+  //console.log(clicked);
 
   const handleClick = () => {
     setClicked(!clicked);

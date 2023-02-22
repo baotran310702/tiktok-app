@@ -161,7 +161,7 @@ function Header() {
   const newMessages = 13;
 
   const handleMenuChange = (menuItem) => {
-    console.log(menuItem);
+    //console.log(menuItem);
   };
 
   return (

@@ -27,13 +27,15 @@
   width: 18px;
   height: 20px;
   transition: transform 0.2s ease-in-out;
+  animation: color-changeDisactive 0.5s ease-in-out;
 }
 
 .icon-active {
   width: 18px;
   height: 20px;
   transition: transform 0.2s ease-in-out;
-  animation: color-change 1s ease-in-out;
+  animation: color-changeActive 0.5s ease-in-out;
+  animation: firework 1s ease-out;
   color: red;
 }
 
@@ -43,7 +45,7 @@
 
 //Key frames color change button react
 
-@keyframes color-change {
+@keyframes color-changeActive {
   0% {
     color: rgb(0, 0, 0);
   }
@@ -52,5 +54,34 @@
   }
   100% {
     color: red;
+  }
+}
+
+@keyframes color-changeDisactive {
+  0% {
+    color: red;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: rgb(0, 0, 0);
+  }
+}
+
+//keyframes for firework
+
+@keyframes firework {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
   }
 }

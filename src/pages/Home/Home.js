@@ -1,5 +1,5 @@
 import className from 'classnames/bind';
-import VideoContent from '~/components/VideoContent';
+import VideoContent from '../../components/VideoContent';
 import styles from './Home.module.scss';
 const cx = className.bind(styles);
 
@@ -12,11 +12,9 @@ function Home() {
     linkSong: 'https://www.youtube.com/watch?v=irkJQBgZvXc',
     nameSong: 'Tấm lòng son Remix LCK',
   };
+
   return (
     <div className={cx('wrapper')}>
-      <VideoContent data={data} />
-      <VideoContent data={data} />
-      <VideoContent data={data} />
       <VideoContent data={data} />
       <VideoContent data={data} />
       <VideoContent data={data} />

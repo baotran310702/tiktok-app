@@ -4,11 +4,41 @@ import Image from '../Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faMusic } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button';
-import video from '~/assets/videos/videoplayback2.mp4';
+import video from '../../assets/videos/videoplayback2.mp4';
 import InteractButton from '../InteractButton';
+import { useEffect, useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 const cx = classNames.bind(styles);
 
 function VideoContent({ data }) {
+  const videoRef = useRef(null);
+
+  // const [ref, inView] = useInView({
+  //   threshold: 0.5,
+  // });
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          console.log(videoRef.current);
+          if (entry.isIntersecting && entry.target === videoRef.current) {
+            videoRef.current.play();
+          } else {
+            videoRef.current.pause();
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+    observer.observe(videoRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   const dataBtn = {
     heart: 22,
     comment: 125,
@@ -38,13 +68,7 @@ function VideoContent({ data }) {
           </Button>
         </div>
         <div className={cx('video-container')}>
-          <video
-            className={cx('video')}
-            src={video}
-            controls
-            autoPlay={true}
-            controlsList="nodownload, nofullscreen"
-          ></video>
+          <video ref={videoRef} className={cx('video')} src={video} controls />
           <div className={cx('interact-btn-container')}>
             <InteractButton className={cx('interact-btn')} isShare data={dataBtn}></InteractButton>
 
