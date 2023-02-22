@@ -6,7 +6,7 @@ import { faCheckCircle, faMusic } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button';
 import video from '../../assets/videos/videoplayback2.mp4';
 import InteractButton from '../InteractButton';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 const cx = classNames.bind(styles);
@@ -17,6 +17,8 @@ function VideoContent({ data }) {
   // const [ref, inView] = useInView({
   //   threshold: 0.5,
   // });
+
+  const [isFollow, setIsFollow] = useState(data.isFollow);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,8 +65,19 @@ function VideoContent({ data }) {
               {data.nameSong}
             </a>
           </h4>
-          <Button className={cx('follow-btn')} primary small>
-            Follow
+          <Button
+            className={cx('follow-btn')}
+            secondary={!data.isFollow}
+            rounded={data.isFollow}
+            retangle
+            outline
+            small
+            onClick={() => {
+              setIsFollow(!isFollow);
+              data.isFollow = !data.isFollow;
+            }}
+          >
+            {data.isFollow ? 'Following' : 'Follow'}
           </Button>
         </div>
         <div className={cx('video-container')}>

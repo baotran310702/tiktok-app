@@ -11,6 +11,7 @@ function Home() {
     comment: 'Congratulations!, we will be champion!',
     linkSong: 'https://www.youtube.com/watch?v=irkJQBgZvXc',
     nameSong: 'Tấm lòng son Remix LCK',
+    isFollow: true,
   };
 
   return (
