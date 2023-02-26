@@ -1,13 +1,17 @@
+import classNames from 'classnames/bind';
+import styles from './Live.module.scss';
+
+const cx = classNames.bind(styles);
+
 function Live() {
-  const data = {
-    name: 'Faker',
-    tick: true,
-    full_name: 'hyeok lee',
-    comment: 'Congratulations!, we will be champion!',
-    linkSong: 'https://www.youtube.com/watch?v=irkJQBgZvXc',
-    nameSong: 'Tấm lòng son Remix LCK',
-  };
-  return <div>LIVESSSSSSSSSS</div>;
+  return (
+    <div className={cx('wrapper')}>
+      <div className={cx('title')}>
+        <h2>This site has been updating, sorry for the inconvenient! </h2>
+        <h1>404</h1>
+      </div>
+    </div>
+  );
 }
 
 export default Live;

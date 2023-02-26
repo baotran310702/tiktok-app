@@ -1,0 +1,102 @@
+.wrapper {
+  min-height: 1000px;
+  margin-top: 50px;
+  width: 532px;
+  display: flex;
+}
+
+.profiles {
+}
+
+.interact-box {
+  display: flex;
+}
+
+.interact-icon {
+  mix-blend-mode: color-burn;
+  width: 24px;
+  height: 24px;
+  margin-left: 24px;
+  margin-top: 12px;
+}
+
+.basic-infor-box {
+  display: flex;
+  max-width: 624px;
+}
+
+.basic-infor {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.avatar {
+  height: 116px;
+  width: 116px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  color: #000;
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.follow-btn {
+  margin-top: 24px;
+  padding: 8px 80px;
+  margin-left: -4px;
+}
+
+.fullname {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 450px;
+}
+
+.tick {
+  margin-left: 8px;
+  color: rgb(32, 213, 236);
+  font-size: 14px;
+}
+
+.detail-infor {
+  margin-top: 16px;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.number-infor {
+  margin-right: 12px;
+}
+
+.num-infor {
+  margin-right: 16px;
+  color: rgba(22, 24, 35, 0.75);
+}
+
+.data {
+  margin-right: 8px;
+}
+
+.comment {
+  color: #000;
+  white-space: pre-line;
+  overflow: hidden;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+}
