@@ -8,6 +8,9 @@ import video from '../../assets/videos/videoplayback2.mp4';
 import InteractButton from '../InteractButton';
 import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import AccountPreview from '../../layout/components/Sidebar/SuggestAccounts/AccountPreview/AccountPreview';
+import { Wrapper as ProperWrapper } from '~/layout/Popper';
+import Tippy from '@tippyjs/react/headless';
 
 const cx = classNames.bind(styles);
 
@@ -45,6 +48,16 @@ function VideoContent({ data }) {
     heart: 22,
     comment: 125,
   };
+
+  const renderPreview = ({ props }) => {
+    return (
+      <div tabIndex="-1" {...props}>
+        <ProperWrapper className={cx('menu-popper')}>
+          <AccountPreview></AccountPreview>
+        </ProperWrapper>
+      </div>
+    );
+  };
   return (
     <div className={cx('wrapper')}>
       <Image
@@ -55,16 +68,26 @@ function VideoContent({ data }) {
       />
       <div className={cx('content')}>
         <div className={cx('title')}>
-          <h4 className={cx('name')}>
-            <span>{data.name}</span>
-            {data.tick && <FontAwesomeIcon className={cx('tick')} icon={faCheckCircle}></FontAwesomeIcon>}
-            <span className={cx('username')}>{data.full_name}</span>
-            <p className={cx('comment')}>{data.comment}</p>
-            <a href={data.linkSong} target="_blank" className={cx('name-song')}>
-              <FontAwesomeIcon className={cx('icon-song')} icon={faMusic}></FontAwesomeIcon>
-              {data.nameSong}
-            </a>
-          </h4>
+          <Tippy
+            interactive={true}
+            placement="top-start"
+            offset={[-10, -50]}
+            delay={[800, 0]}
+            render={renderPreview}
+            hideOnClick={true}
+          >
+            <h4 className={cx('name')}>
+              <span>{data.name}</span>
+              {data.tick && <FontAwesomeIcon className={cx('tick')} icon={faCheckCircle}></FontAwesomeIcon>}
+              <span className={cx('username')}>{data.full_name}</span>
+              <p className={cx('comment')}>{data.comment}</p>
+              <a href={data.linkSong} target="_blank" className={cx('name-song')}>
+                <FontAwesomeIcon className={cx('icon-song')} icon={faMusic}></FontAwesomeIcon>
+                {data.nameSong}
+              </a>
+            </h4>
+          </Tippy>
+
           <Button
             className={cx('follow-btn')}
             secondary={!data.isFollow}

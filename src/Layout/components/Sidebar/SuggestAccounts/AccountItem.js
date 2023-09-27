@@ -25,7 +25,14 @@ function AccountItem({ label }) {
   };
 
   return (
-    <Tippy interactive={true} placement="bottom" offset={[-20, 0]} delay={[800, 0]} render={renderPreview}>
+    <Tippy
+      interactive={true}
+      placement="bottom"
+      offset={[-20, 0]}
+      delay={[800, 0]}
+      render={renderPreview}
+      hideOnClick={true}
+    >
       <div className={cx('account-item')}>
         <Image className={cx('image-item')} src={images} alt="my girls"></Image>
         <div className={cx('infor-item')}>
