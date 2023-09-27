@@ -1,5 +1,5 @@
 import './App.css';
-import DefaultLayout from './layout/DefaultLayout/DefaultLayout';
+import { DefaultLayout } from './Layout/DefaultLayout';
 import { publicRoutes } from './routes/index';
 import { Fragment } from 'react';
 
