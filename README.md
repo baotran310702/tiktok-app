@@ -2,7 +2,7 @@
 This is my old project, i've done ui, but ux and backend is still in processing.
 
 # Deployment
-Link to my project: <a href="tiktok-app-baotran.netlify.app" target="_blank">here</a>
+Link to my project: [tiktok-app-baotran.netlify.app]
 
 # Home page
 <img src="https://res.cloudinary.com/boyplunger128/image/upload/v1695799677/tiktok_tzswds.png"/>
